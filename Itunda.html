@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Itunda - Fruit Vending Business</title>
+    <style>
+        /* Basic CSS styling */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f8f8f8;
+        }
+        
+        header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        
+        .logo {
+            font-family: 'Brush Script MT', cursive;
+            font-size: 3em;
+            color: #ff9500;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+            transform: rotate(-5deg);
+            display: inline-block;
+            background: linear-gradient(135deg, #ff9500, #ff6a00);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 10px;
+        }
+        
+        h1 {
+            font-family: 'Times New Roman', Times, serif;
+            color: #333;
+            margin-top: 0;
+        }
+        
+        .fruit-number {
+            font-weight: bold;
+            font-size: 1.3em;
+            margin-right: 15px;
+            min-width: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #333;
+        }
+        
+        .fruit-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+            background-color: white;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        
+        .fruit-image {
+            width: 100px;
+            height: 100px;
+            object-fit: cover;
+            border-radius: 5px;
+            margin-right: 20px;
+        }
+        
+        .fruit-details {
+            flex: 1;
+        }
+        
+        .fruit-name {
+            font-weight: bold;
+            font-size: 1.2em;
+            margin-bottom: 5px;
+        }
+        
+        .fruit-price {
+            color: #007bff;
+            font-weight: bold;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 30px 0;
+        }
+        
+        table, th, td {
+            border: 1px solid #ddd;
+        }
+        
+        th, td {
+            padding: 12px;
+            text-align: left;
+        }
+        
+        th {
+            background-color: #f2f2f2;
+        }
+        
+        form {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            max-width: 600px;
+            margin: 30px auto;
+        }
+        
+        .form-group {
+            margin-bottom: 15px;
+        }
+        
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        
+        input[type="text"],
+        input[type="email"],
+        input[type="password"],
+        input[type="date"],
+        select {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        
+        button:hover {
+            background-color: #45a049;
+        }
+        
+        .radio-group, .checkbox-group {
+            margin-top: 5px;
+        }
+        
+        footer {
+            text-align: center;
+            margin-top: 30px;
+            color: #666;
+            font-size: 0.9em;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="logo">Itunda</div>
+        <h1>So sweet, you've to try it</h1>
+    </header>
+    
+    <!-- Fruit List Section -->
+    <section>
+        <ol class="fruit-list" type="I">
+            <li class="fruit-item">
+                <div class="fruit-number">I.</div>
+                <img src="https://images.pexels.com/photos/918643/pexels-photo-918643.jpeg" alt="Mangoes" class="fruit-image">
+                <div class="fruit-details">
+                    <div class="fruit-name">Mangoes</div>
+                    <div class="fruit-price">Ksh 50 per piece</div>
+                </div>
+            </li>
+            <li class="fruit-item">
+                <div class="fruit-number">II.</div>
+                <img src="https://images.pexels.com/photos/2469772/pexels-photo-2469772.jpeg" alt="Pineapples" class="fruit-image">
+                <div class="fruit-details">
+                    <div class="fruit-name">Pineapples</div>
+                    <div class="fruit-price">Ksh 150 per piece</div>
+                </div>
+            </li>
+            <li class="fruit-item">
+                <div class="fruit-number">III.</div>
+                <img src="https://images.pexels.com/photos/1510392/pexels-photo-1510392.jpeg" alt="Apples" class="fruit-image">
+                <div class="fruit-details">
+                    <div class="fruit-name">Apples</div>
+                    <div class="fruit-price">Ksh 40 per piece</div>
+                </div>
+            </li>
+            <li class="fruit-item">
+                <div class="fruit-number">IV.</div>
+                <img src="https://images.pexels.com/photos/1093038/pexels-photo-1093038.jpeg" alt="Bananas" class="fruit-image">
+                <div class="fruit-details">
+                    <div class="fruit-name">Bananas</div>
+                    <div class="fruit-price">Ksh 120 per bunch</div>
+                </div>
+            </li>
+            <li class="fruit-item">
+                <div class="fruit-number">V.</div>
+                <img src="https://images.pexels.com/photos/51312/kiwi-fruit-vitamins-healthy-eating-51312.jpeg" alt="Kiwi Fruits" class="fruit-image">
+                <div class="fruit-details">
+                    <div class="fruit-name">Kiwi Fruits</div>
+                    <div class="fruit-price">Ksh 70 per piece</div>
+                </div>
+            </li>
+            <li class="fruit-item">
+                <div class="fruit-number">VI.</div>
+                <img src="https://images.pexels.com/photos/2090900/pexels-photo-2090900.jpeg" alt="Oranges" class="fruit-image">
+                <div class="fruit-details">
+                    <div class="fruit-name">Oranges</div>
+                    <div class="fruit-price">Ksh 35 per piece</div>
+                </div>
+            </li>
+        </ol>
+    </section>
+    
+    <!-- Contacts Table Section -->
+    <section>
+        <h2>Our Contacts</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Position</th>
+                    <th>Name</th>
+                    <th>Address</th>
+                    <th>Mobile</th>
+                    <th>Email</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Manager</td>
+                    <td>John Kamau</td>
+                    <td>Nairobi, Kenya</td>
+                    <td>+254 712 345 678</td>
+                    <td>manager@itunda.com</td>
+                </tr>
+                <tr>
+                    <td>Accountant</td>
+                    <td>Mary Wanjiku</td>
+                    <td>Kiambu, Kenya</td>
+                    <td>+254 723 456 789</td>
+                    <td>accountant@itunda.com</td>
+                </tr>
+                <tr>
+                    <td>HR</td>
+                    <td>Peter Ochieng</td>
+                    <td>Kisumu, Kenya</td>
+                    <td>+254 734 567 890</td>
+                    <td>hr@itunda.com</td>
+                </tr>
+                <tr>
+                    <td>Security Head</td>
+                    <td>James Mwangi</td>
+                    <td>Nakuru, Kenya</td>
+                    <td>+254 745 678 901</td>
+                    <td>security@itunda.com</td>
+                </tr>
+                <tr>
+                    <td>Transport Head</td>
+                    <td>Sarah Mutua</td>
+                    <td>Mombasa, Kenya</td>
+                    <td>+254 756 789 012</td>
+                    <td>transport@itunda.com</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+    
+    <!-- Customer Registration Form -->
+    <section>
+        <h2>Customer Registration Form</h2>
+        <form id="registrationForm">
+            <!-- Name Field -->
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+            </div>
+            
+            <!-- Email Field -->
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" placeholder="Enter your email address" required>
+            </div>
+            
+            <!-- Password Field -->
+            <div class="form-group">
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" placeholder="Choose a password" required minlength="8">
+            </div>
+            
+            <!-- Date Field -->
+            <div class="form-group">
+                <label for="birthdate">Date of Birth:</label>
+                <input type="date" id="birthdate" name="birthdate" required>
+            </div>
+            
+            <!-- Dropdown -->
+            <div class="form-group">
+                <label for="location">Preferred Location:</label>
+                <select id="location" name="location" required>
+                    <option value="">-- Select Location --</option>
+                    <option value="nairobi">Nairobi</option>
+                    <option value="mombasa">Mombasa</option>
+                    <option value="kisumu">Kisumu</option>
+                    <option value="nakuru">Nakuru</option>
+                    <option value="eldoret">Eldoret</option>
+                </select>
+            </div>
+            
+            <!-- Radio Buttons -->
+            <div class="form-group">
+                <label>Payment Method:</label>
+                <div class="radio-group">
+                    <input type="radio" id="mpesa" name="payment" value="mpesa" required>
+                    <label for="mpesa">M-Pesa</label>
+                    
+                    <input type="radio" id="card" name="payment" value="card">
+                    <label for="card">Credit/Debit Card</label>
+                    
+                    <input type="radio" id="cash" name="payment" value="cash">
+                    <label for="cash">Cash on Delivery</label>
+                </div>
+            </div>
+            
+            <!-- Checkboxes -->
+            <div class="form-group">
+                <label>Preferred Fruits:</label>
+                <div class="checkbox-group">
+                    <input type="checkbox" id="prefer-mangoes" name="preferred_fruits" value="mangoes">
+                    <label for="prefer-mangoes">Mangoes</label>
+                    
+                    <input type="checkbox" id="prefer-pineapples" name="preferred_fruits" value="pineapples">
+                    <label for="prefer-pineapples">Pineapples</label>
+                    
+                    <input type="checkbox" id="prefer-apples" name="preferred_fruits" value="apples">
+                    <label for="prefer-apples">Apples</label>
+                    
+                    <input type="checkbox" id="prefer-bananas" name="preferred_fruits" value="bananas">
+                    <label for="prefer-bananas">Bananas</label>
+                    
+                    <input type="checkbox" id="prefer-kiwi" name="preferred_fruits" value="kiwi">
+                    <label for="prefer-kiwi">Kiwi Fruits</label>
+                    
+                    <input type="checkbox" id="prefer-oranges" name="preferred_fruits" value="oranges">
+                    <label for="prefer-oranges">Oranges</label>
+                </div>
+            </div>
+            
+            <!-- Submit Button -->
+            <button type="submit">Register</button>
+        </form>
+    </section>
+    
+    <footer>
+        &copy; 2025 Itunda - All Rights Reserved
+    </footer>
+</body>
+</html>
